@@ -1,14 +1,8 @@
-/* Home.css */
 .home-container {
   position: relative;
   padding: 50px;
   color: white;
-  background-image: url('./imgs/A_calming_serene_landscape_background.png'); /* Path to your image */
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Centers the image in the container */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
-
 
 .intro-section {
   position: relative;

@@ -10,6 +10,7 @@ import Module3 from './Module3';
 import Module4 from './Module4';
 import Module5 from './Module5';
 import Support from './Support'; // Import the Support component
+import Discussion from './Discussion';
 import FAQ from "./FAQ";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/module4" element={<Module4 />} />
           <Route path="/module5" element={<Module5 />} />
           <Route path="/support" element={<Support />} /> {/* Add this route */}
+          <Route path="/discussion" element={<Discussion />} />
           <Route path="/FAQ" element={<FAQ />} />
         </Routes>
       </div>
