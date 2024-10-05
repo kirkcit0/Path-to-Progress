@@ -12,3 +12,4 @@ cron.schedule('0 0 * * *', async () => {
         console.error('Error in cron job:', error.message);
     }
 });
+// 
