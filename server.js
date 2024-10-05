@@ -4,8 +4,7 @@ const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
 
-// const authenticateRoutes = require("./routes/authenticate");
-// const tripRoutes = require("./routes/trip");
+// const authenticateRoutes = require("./routes/auth");
 // const userRoutes = require("./routes/user");
 
 // express app
@@ -18,7 +17,6 @@ app.use(express.json());
 
 // routes
 // app.use("/api", authenticateRoutes);
-// app.use("/api/trips", tripRoutes);
 // app.use("/api/user", userRoutes);
 
 // app.use(express.static(path.join(__dirname + "/frontend/build")));
@@ -42,10 +40,7 @@ app.listen(port, console.log(`Listening on port ${port}...`));
 //This is where mongoose tries to connect to the MongoDB 
 mongoose.connect(process.env.ATLAS_URI)
 .then(() => {
-  // listen for requests
-  // app.listen(port, () => {
   console.log("connected to the db and listening on port", process.env.PORT)
-  // })
 })
 .catch((error) => {
   console.log("Could not connect to database!");
