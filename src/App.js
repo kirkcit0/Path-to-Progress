@@ -2,12 +2,14 @@ import React from 'react';
 import './App.css';
 import Navbar from './Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Modules from './Modules';
-import Support from './Support';
-import Discussion from './Discussion';
-import FAQ from './FAQ';
-import Login from './Login';
 import Home from './Home';
+import Modules from './Modules';
+import Module1 from './Module1';
+import Module2 from './Module2';
+import Module3 from './Module3';
+import Module4 from './Module4';
+import Module5 from './Module5';
+
 
 function App() {
   return (
@@ -17,10 +19,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/modules" element={<Modules />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/discussion" element={<Discussion />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/module1" element={<Module1 />} />
+          <Route path="/module2" element={<Module2 />} />
+          <Route path="/module3" element={<Module3 />} />
+          <Route path="/module4" element={<Module4 />} />
+          <Route path="/module5" element={<Module5 />} />
         </Routes>
       </div>
     </Router>
