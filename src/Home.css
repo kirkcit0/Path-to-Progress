@@ -1,21 +1,73 @@
+/* Home.css */
 .home-container {
   position: relative;
   padding: 50px;
+  color: white;
+  background-image: url('./imgs/A_calming_serene_landscape_background.png'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image in the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+.intro-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .background-gif {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  z-index: 0; /* To place it behind the text */
-  opacity: 0.7; /* Optional: Adjust opacity if needed */
+  width: 150px; /* Adjust the size as needed */
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  opacity: 0.7;
 }
 
 .welcome-text {
   position: relative;
-  z-index: 1; /* To make sure the text appears above the GIF */
+  z-index: 1;
   color: white;
   font-size: 2em;
   text-align: center;
+  margin-top: 1rem;
+}
+
+.about-us,
+.project-inspiration,
+.you-matter {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(40, 44, 52, 0.8); /* Slight transparency for better readability */
+  padding: 20px;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.about-us h2,
+.project-inspiration h2,
+.you-matter h2 {
+  color: #61dafb;
+  margin-bottom: 10px;
+}
+
+.about-us p,
+.project-inspiration p,
+.you-matter p {
+  line-height: 1.6;
+}
+
+.you-matter ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.you-matter ul li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+.you-matter ul li strong {
+  color: #ff6f61; /* Highlight important contact numbers */
 }
