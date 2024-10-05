@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Login.css'
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -8,7 +10,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Login logic (replace with real API call)
+    // Handle login logic
     if (username === 'admin' && password === 'password123') {
       alert('Login Successful');
       setErrorMessage('');
@@ -42,6 +44,10 @@ function Login() {
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         <button type="submit">Login</button>
       </form>
+
+      <p>
+        Don't have an account? <Link to="/signup">Sign Up</Link>
+      </p>
     </div>
   );
 }
