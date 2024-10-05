@@ -1,9 +1,67 @@
 .home-container {
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 2rem auto;
-  }
-  
+  position: relative;
+  padding: 50px;
+  color: white;
+}
+
+.intro-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.background-gif {
+  width: 150px; /* Adjust the size as needed */
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  opacity: 0.7;
+}
+
+.welcome-text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.about-us,
+.project-inspiration,
+.you-matter {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(40, 44, 52, 0.8); /* Slight transparency for better readability */
+  padding: 20px;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.about-us h2,
+.project-inspiration h2,
+.you-matter h2 {
+  color: #61dafb;
+  margin-bottom: 10px;
+}
+
+.about-us p,
+.project-inspiration p,
+.you-matter p {
+  line-height: 1.6;
+}
+
+.you-matter ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.you-matter ul li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+.you-matter ul li strong {
+  color: #ff6f61; /* Highlight important contact numbers */
+}

@@ -9,8 +9,9 @@ import Module2 from './Module2';
 import Module3 from './Module3';
 import Module4 from './Module4';
 import Module5 from './Module5';
-import FAQ from './FAQ';
-import SupportFinder from './SupportFinder';
+import Support from './Support'; // Import the Support component
+import Discussion from './Discussion';
+import FAQ from "./FAQ";
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
           <Route path="/module3" element={<Module3 />} />
           <Route path="/module4" element={<Module4 />} />
           <Route path="/module5" element={<Module5 />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/support-finder" element={<SupportFinder />} />
+          <Route path="/support" element={<Support />} /> {/* Add this route */}
+          <Route path="/discussion" element={<Discussion />} />
+          <Route path="/FAQ" element={<FAQ />} />
         </Routes>
       </div>
     </Router>
