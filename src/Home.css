@@ -1,9 +1,21 @@
 .home-container {
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 2rem auto;
-  }
-  
+  position: relative;
+  padding: 50px;
+}
+
+.background-gif {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  z-index: 0; /* To place it behind the text */
+  opacity: 0.7; /* Optional: Adjust opacity if needed */
+}
+
+.welcome-text {
+  position: relative;
+  z-index: 1; /* To make sure the text appears above the GIF */
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
