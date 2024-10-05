@@ -1,7 +1,10 @@
 .faq-container {
-  max-width: 600px;
-  margin: 40px auto;
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f0f2f5;
+  color: #282c34;
 }
 
 .faq-input {

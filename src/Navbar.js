@@ -12,6 +12,7 @@ function Navbar() {
         <li><Link to="/discussion">Discussion</Link></li>
         <li><Link to="/faq">FAQ</Link></li>
         <li><Link to="/login">Login/Signup</Link></li>
+        <li><Link to="/support-finder">Find Local Support</Link></li>
       </ul>
     </nav>
   );
