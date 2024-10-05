@@ -12,6 +12,7 @@ import Module5 from './components/Module5';
 import Support from './components/Support'; // Import the Support component
 import Discussion from './components/Discussion';
 import FAQ from "./components/FAQ";
+import XPStatsPage from './components/XPStatsPage'; 
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/support" element={<Support />} /> {/* Add this route */}
           <Route path="/discussion" element={<Discussion />} />
           <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/profile" element={<XPStatsPage />} />
         </Routes>
       </div>
     </Router>

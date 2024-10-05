@@ -1,0 +1,6 @@
+PORT = 4000
+ATLAS_URI="mongodb+srv://lefevrekirk:oG5ZNNMAmFMCQhpE@pathtoprogress.lgbiw.mongodb.net/?"
+JWTPRIVATEKEY = "supersecret123ooospooky"
+SALT = 10
+
+BASE_URL = "http://localhost:3000/"

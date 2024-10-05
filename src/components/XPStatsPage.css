@@ -1,0 +1,22 @@
+.xp-stats-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.xp-details p {
+  font-size: 18px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

@@ -8,8 +8,11 @@ body {
 }
 
 .App {
+  background-color: #282c3400;
   text-align: center;
   background-color: #282c34; /* Match the background color of the app container with the navbar */
+  min-width: 600px; /* Set minimum width */
+  min-height: 1300px; /* Set minimum height */
 }
 
 .Navbar {
@@ -40,9 +43,15 @@ body {
   color: #61dafb;
 }
 
+.App {
+  background-image: url('imgs/A_calming_serene_landscape_background.png');
+  background-position: center;
+  background-size: cover;
+}
+
 .home-container {
   padding: 2rem;
-  background-color: #282c34; /* Set the background color of the container to match the navbar */
+  background-color: #282c34; 
   color: white; /* Set text color to white for better contrast */
   max-width: 800px;
   margin: 2rem auto;

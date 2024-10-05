@@ -32,7 +32,7 @@
 .you-matter {
   position: relative;
   z-index: 1;
-  background-color: rgba(40, 44, 52, 0.8); /* Slight transparency for better readability */
+  /* background-color: rgba(40, 44, 52, 0.8);  */
   padding: 20px;
   border-radius: 8px;
   margin: 2rem 0;
