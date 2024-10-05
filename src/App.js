@@ -1,7 +1,7 @@
 // client/src/App.js
 import React, { useState } from 'react';
-import Register from './components/register';
-import Login from './components/login';
+import Register from './components/Register';
+import Login from './components/Login';
 
 const App = () => {
     const [loggedInUser, setLoggedInUser] = useState(null);
