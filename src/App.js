@@ -9,7 +9,7 @@ import Module2 from './Module2';
 import Module3 from './Module3';
 import Module4 from './Module4';
 import Module5 from './Module5';
-
+import Support from './Support'; // Import the Support component
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
           <Route path="/module3" element={<Module3 />} />
           <Route path="/module4" element={<Module4 />} />
           <Route path="/module5" element={<Module5 />} />
+          <Route path="/support" element={<Support />} /> {/* Add this route */}
         </Routes>
       </div>
     </Router>
