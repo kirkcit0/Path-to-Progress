@@ -13,6 +13,7 @@ import Support from './Support'; // Import the Support component
 import Discussion from './Discussion';
 import FAQ from "./FAQ";
 
+
 function App() {
   return (
     <Router>
