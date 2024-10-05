@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './SupportFinder.css';
 
 const SupportFinder = () => {
-    //key AIzaSyC3AuEu8iGtCq5YBVlJGba7ruMXOZLbZBM
+    //dissabled
   const [zipCode, setZipCode] = useState('');
   const [results, setResults] = useState([]);
   const [error, setError] = useState('');
