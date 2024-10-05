@@ -1,6 +1,10 @@
-require("dotenv").config();
+// server/config.js
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 module.exports = {
+    jwtSecret: process.env.JWT_SECRET,
     mongoURI: process.env.ATLAS_URI,
-    jwtSecret: process.env.JWTPRIVATEKEY,
+    // Add other configuration variables here
 };
