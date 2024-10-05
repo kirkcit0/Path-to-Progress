@@ -4,7 +4,7 @@ const { createPost, getAllPosts, getPostById, updatePost, deletePost } = require
 const { authenticate } = require('../middleware/auth'); // Assuming you have authentication middleware
 
 // Create a new post
-router.post('/', authenticate, createPost); // Requires authentication
+router.post('/', createPost); // Requires authentication
 
 // Get all posts
 router.get('/', getAllPosts);
@@ -13,9 +13,9 @@ router.get('/', getAllPosts);
 router.get('/:id', getPostById);
 
 // Update a post
-router.patch('/:id', authenticate, updatePost); // Requires authentication
+router.patch('/:id', updatePost); // Requires authentication
 
 // Delete a post
-router.delete('/:id', authenticate, deletePost); // Requires authentication
+router.delete('/:id', deletePost); // Requires authentication
 
 module.exports = router;
