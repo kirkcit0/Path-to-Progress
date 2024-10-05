@@ -17,7 +17,7 @@ const Register = () => {
     const onSubmit = async e => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5050/api/auth/register', {
+            await axios.post('http://localhost:5050/api/auth/register', {
                 username,
                 password
             });
