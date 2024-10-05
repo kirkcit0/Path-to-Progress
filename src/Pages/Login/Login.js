@@ -1,21 +1,40 @@
+// Login.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Login.css'
+import './Login.css';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage('');
+    setSuccessMessage('');
 
-    // Handle login logic
-    if (username === 'admin' && password === 'password123') {
-      alert('Login Successful');
-      setErrorMessage('');
-    } else {
-      setErrorMessage('Invalid username or password');
+    try {
+      const response = await fetch('http://localhost:5050/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.errors ? data.errors.map(err => err.msg).join(', ') : data.msg);
+      }
+
+      localStorage.setItem('token', data.token);
+      setSuccessMessage('Login successful!');
+      navigate('/profile'); // Redirect to the dashboard or desired page
+    } catch (error) {
+      setErrorMessage(error.message);
     }
   };
 
@@ -42,9 +61,9 @@ function Login() {
           />
         </div>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {successMessage && <p className="success-message">{successMessage}</p>}
         <button type="submit">Login</button>
       </form>
-
       <p>
         Don't have an account? <Link to="/signup">Sign Up</Link>
       </p>

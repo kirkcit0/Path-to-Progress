@@ -1,24 +1,41 @@
+// SignUp.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './SignUp.css'
+import './SignUp.css';
+import { useNavigate, Link } from 'react-router-dom';
 
 function SignUp() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Sign up logic (replace with real API call)
-    if (password !== confirmPassword) {
-      setErrorMessage('Passwords do not match');
-      return;
-    }
-
-    alert('Sign Up Successful');
     setErrorMessage('');
+    setSuccessMessage('');
+
+    try {
+      const response = await fetch('http://localhost:5050/api/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.errors ? data.errors.map(err => err.msg).join(', ') : data.msg);
+      }
+
+      localStorage.setItem('token', data.token);
+      setSuccessMessage('Registration successful!');
+      navigate('/dashboard'); // Redirect to the dashboard or desired page
+    } catch (error) {
+      setErrorMessage(error.message);
+    }
   };
 
   return (
@@ -43,23 +60,12 @@ function SignUp() {
             required
           />
         </div>
-        <div className="input-container">
-          <label>Confirm Password:</label>
-          <input
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
-        </div>
-
         {errorMessage && <p className="error-message">{errorMessage}</p>}
-
+        {successMessage && <p className="success-message">{successMessage}</p>}
         <button type="submit">Sign Up</button>
       </form>
-
       <p>
-        Already have an account? <Link to="/login">Login</Link>
+        Already have an account? <Link to="/login">Log In</Link>
       </p>
     </div>
   );

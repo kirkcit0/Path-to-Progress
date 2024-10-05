@@ -16,4 +16,9 @@ try {
   }
 })
 
+// const { incrementDays } = require('../controllers/userController');
+// const { authenticate } = require('../middleware/auth'); // Assuming you have authentication middleware
+
+// router.patch('/incrementDays', authenticate, incrementDays); // PATCH method for updating
+
 module.exports = router;

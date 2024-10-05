@@ -1,0 +1,29 @@
+/* Profile.css */
+.profile-container {
+    background-color: #2E2E2E; /* Dark background */
+    color: #F5F5F5; /* Light text */
+    font-family: 'Cinzel', serif; /* Fantasy font */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.profile-details {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #8A2BE2; /* Button color */
+    color: #FFF;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.error-message {
+    color: #FF6347; /* Error message color */
+}

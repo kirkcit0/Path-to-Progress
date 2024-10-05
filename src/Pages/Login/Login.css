@@ -1,41 +1,46 @@
+/* Login.css */
 .login-container {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .input-container {
-    margin-bottom: 15px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 14px;
-  }
-  
+  background-color: #2E2E2E; /* Dark background */
+  color: #F5F5F5; /* Light text */
+  font-family: 'Cinzel', serif; /* Fantasy font */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4E4E4E; /* Input background */
+  color: #F5F5F5; /* Input text color */
+}
+
+button {
+  background-color: #8A2BE2; /* Button color */
+  color: #FFF;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #FF6347; /* Error message color */
+}
+
+.success-message {
+  color: #32CD32; /* Success message color */
+}
+
+p {
+  text-align: center;
+}
