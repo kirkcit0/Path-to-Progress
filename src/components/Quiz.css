@@ -1,0 +1,52 @@
+.quiz-container {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question-block {
+    margin-bottom: 1.5rem;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .option-button {
+    background-color: #61dafb;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .option-button:hover {
+    background-color: #21a1f1;
+  }
+  
+  .option-button.correct {
+    background-color: #4caf50; /* Green for correct */
+  }
+  
+  .option-button.wrong {
+    background-color: #f44336; /* Red for wrong */
+  }
+  
+  .correct-icon {
+    color: #4caf50;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  
+  .wrong-icon {
+    color: #f44336;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  

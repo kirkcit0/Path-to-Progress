@@ -1,0 +1,33 @@
+.modules-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f0f2f5;
+  }
+  
+  .modules-container h1 {
+    color: #282c34;
+    margin-bottom: 2rem;
+  }
+  
+  .module-box {
+    background-color: #61dafb;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.5rem;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .module-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
