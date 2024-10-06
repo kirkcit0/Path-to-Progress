@@ -22,11 +22,15 @@ const auth = async (req, res, next) => {
             return res.status(401).json({ msg: 'User not found, authorization denied' });
         }
 
+        console.log('Authenticated user:', req.user); // Log authenticated user
+        console.log(req.param.username)
         next();
     } catch (error) {
         console.error('Authentication middleware error:', error.message);
         res.status(401).json({ msg: 'Token is not valid' });
     }
 };
+
+
 
 module.exports = auth;

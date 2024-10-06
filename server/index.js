@@ -5,7 +5,10 @@ const cors = require('cors');
 const config = require('./config'); // Import configuration
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
+// const postRoutes = require('./routes/post');
 const cronJob = require('./cron/cronjob');
+const threadRoutes = require('./routes/threadroutes');
+
 
 const app = express();
 
@@ -16,6 +19,8 @@ app.use(cors());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/threads', threadRoutes);
+// app.use('/api/posts', postRoutes);
 
 // Connect to MongoDB
 mongoose.connect(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })

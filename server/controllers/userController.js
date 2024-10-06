@@ -21,10 +21,12 @@ exports.resetDays = async (req, res) => {
     }
 };
 
-// (Optional) Get User Profile
+// Get User Profile
 exports.getUserProfile = async (req, res) => {
+    console.log('Inside getUserProfile'); // Log to check if method is called
     try {
         const userId = req.user.id;
+        console.log('Fetching profile for user ID:', userId); // Log the user ID
         const user = await User.findById(userId).select('-password'); // Exclude password
 
         if (!user) {
@@ -37,3 +39,5 @@ exports.getUserProfile = async (req, res) => {
         res.status(500).json({ msg: 'Server Error' });
     }
 };
+
+
