@@ -10,6 +10,11 @@ body {
 .App {
   text-align: center;
   background-color: #282c34; /* Match the background color of the app container with the navbar */
+  background-image: url('imgs/A_calming_serene_landscape_background.png');
+  background-position: center;
+  background-size: cover;
+  min-width: 600px; 
+  min-height: 1300px; 
 }
 
 .Navbar {

@@ -14,6 +14,7 @@
   }
   
   button {
+    border-radius: 1rem;
     background-color: #61dafb;
     color: #282c34;
     border: none;
