@@ -5,6 +5,7 @@ const Thread = require('../models/Thread'); // Import your Thread model
 
 // Get threads based on addiction
 router.get('/', async (req, res) => {
+    console.log("fetching");
     const { addiction } = req.query;
     try {
         const threads = await Thread.find({ addiction }); // Adjust according to your data model
@@ -16,6 +17,7 @@ router.get('/', async (req, res) => {
 
 // Create a new thread
 router.post('/', async (req, res) => {
+    console.log('POST request received at /api/threads with body:', req.body); // Log request body
     const { title, addiction } = req.body;
 
     try {
@@ -27,8 +29,10 @@ router.post('/', async (req, res) => {
         const savedThread = await newThread.save();
         res.status(201).json(savedThread);
     } catch (error) {
+        console.error('Error creating thread:', error); // Log the error
         res.status(500).json({ msg: 'Error creating thread' });
     }
 });
+
 
 module.exports = router;

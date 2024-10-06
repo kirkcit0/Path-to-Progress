@@ -1,11 +1,10 @@
-// client/src/components/Discussion.js
-import React, { useState } from 'react';
-import './Discussion.css';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Discussion.css';
 
 function Discussion() {
   const [selectedAddiction, setSelectedAddiction] = useState(null);
-  const [threads, setThreads] = useState([]);
+  const [threads, setThreads] = useState([]); // Initialize threads state
   const [newThreadTitle, setNewThreadTitle] = useState('');
 
   const addictions = [
@@ -18,32 +17,38 @@ function Discussion() {
 
   const handleAddictionSelect = (addiction) => {
     setSelectedAddiction(addiction);
-    fetchThreads(addiction); // Fetch threads when addiction is selected
+    fetchThreads(addiction); // Fetch threads for the selected addiction
   };
 
   const fetchThreads = async (addiction) => {
     try {
       const response = await axios.get(`/api/threads?addiction=${addiction}`);
-      setThreads(response.data); // Set threads based on API response
+      setThreads(response.data); // Set fetched threads
     } catch (error) {
       console.error('Error fetching threads:', error);
     }
   };
 
-  const handleNewThread = async () => {
+  const handleNewThread = async (event) => {
     if (newThreadTitle) {
       try {
-        const response = await axios.post('/api/threads', {
+        const response = await axios.post('http://localhost:5050/api/threads', {
           title: newThreadTitle,
           addiction: selectedAddiction
         });
+        
         setThreads([...threads, response.data]); // Update threads state with the new thread
         setNewThreadTitle(''); // Clear input field
       } catch (error) {
+        alert(error)
         console.error('Error creating new thread:', error);
       }
+    } else {
+      alert("bad")
+      console.log("No thread title provided"); // Add this line
     }
   };
+  
 
   if (selectedAddiction) {
     return (
@@ -84,7 +89,8 @@ function DiscussionThreads({ threads }) {
       <ul>
         {threads.map((thread) => (
           <li key={thread.id}>
-            <strong>{thread.title}</strong> {/* Link to ThreadView can be added here */}
+            <strong>{thread.title}</strong> ({thread.replies.length} replies) {/* Display replies count */}
+            {/* You can add a link or button here to view replies */}
           </li>
         ))}
       </ul>
